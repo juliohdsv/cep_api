@@ -2,10 +2,15 @@ const cepApi = require('../services/cepApi');
 
 const cepController = {
     
-    show: async (request, response) => {
-        const {codigo} = request.params;
-        const {data: foundData} = await cepApi.get(`/cep/v2/${codigo}`);
-        
+    show: async (request, response) => {        
+        try {
+            const {codigo} = request.params;
+            const {data: foundData} = await cepApi.get(`/cep/v2/${codigo}`);
+        } catch(err){
+            console.log(err.data);
+            return response.send(`<h1>Cep inválido!</h1>`);
+        }
+       
         response.statusCode = 200;
         return response.render('cep', {
             cssType: '/css/cep.css',
