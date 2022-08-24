@@ -1,0 +1,17 @@
+<%- include('./partials/head') %> 
+    <body>
+        <form action="/", method="get">
+            <label for="zipcode">CEP</label>
+            <input id="zipcode" name="zipcode" type="text" value="<%= zipcode %>">
+            <label for="street">Endereço</label>
+            <input id="street" name="street" type="text" value="<%= street %>">
+            <label for="neighborhood">Bairro</label>
+            <input id="neighborhood"  name="neighborhood" type="text" value="<%= neighborhood %>">
+            <label for="city">Cidade</label>
+            <input id="city" name="city" type="text" value="<%= city %>">
+            <label for="state">UF</label>
+            <input id="state" type="text" value="<%= state %>">
+            <button type="submit">Voltar</button>
+        </form>
+    </body>
+</html>
