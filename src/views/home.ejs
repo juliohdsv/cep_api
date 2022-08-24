@@ -1,9 +1,17 @@
 <%- include('./partials/head') %> 
     <body>
-        <h1>Localizar CEP</h1>
         <form action="/cep" method="post">
-            <input type="text" name="codigo" placeholder="Informar o cep">
-            <button type="submit" id="search">Buscar</button>
+            <div class="container">
+                <div>
+                    <h1>Localizar CEP</h1>
+                </div>
+                <div>
+                    <input type="text" name="codigo" placeholder="Informar o cep">
+                </div>
+                <div>
+                    <button type="submit" id="search">Buscar</button>
+                </div>
+            </div>
         </form>
     </body>
 </html>

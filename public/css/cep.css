@@ -15,56 +15,63 @@
 
 body{
     font-family: 'Anek Tamil', sans-serif;
-    margin: 10px;
     background-color: var(--black);
     color: var(--white);
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .container{
     background-color: var(--black);
     border: 1px solid var(--blue);
     border-radius: 10px;
-    height: 18vh;
-    width: 16vw;
+    height: 30vh;
+    width: 20vw;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-input{
+.container div label i{
+    font-size: 1.2em;
+}
+
+.container div input{
     border: 1px solid var(--dark);
     color: var(--blue);
     background-color: var(--black);
     border-radius: 4px;
-    width: 200px;
+    width: 10vw;
     height: 20px;
     padding: 5px;
+    margin: 8px;
 }
 
-input::placeholder{
+.container div input::placeholder{
     text-align: center;
     color: var(--dark);
 }
 
-button{
+.container button{
     border: 1px solid var(--dark);
     border-radius: 6px;
     width: 80px;
     height: 22px;
+    margin: 10px;
     background-color: var(--black);
     color: var(--dark);
     transition: 0.6s;
 }
 
-button:hover{
+.container button:hover{
     background-color: var(--dark);
     color: var(--black);
     border: 1px solid var(--blue);
     transition: 0.6s;
 }
 
-div{
-    margin: 10px;
-}
+

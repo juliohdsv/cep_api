@@ -1,17 +1,31 @@
 <%- include('./partials/head') %> 
     <body>
-        <form action="/", method="get">
-            <label for="zipcode">CEP</label>
-            <input id="zipcode" name="zipcode" type="text" value="<%= zipcode %>">
-            <label for="street">Endereço</label>
-            <input id="street" name="street" type="text" value="<%= street %>">
-            <label for="neighborhood">Bairro</label>
-            <input id="neighborhood"  name="neighborhood" type="text" value="<%= neighborhood %>">
-            <label for="city">Cidade</label>
-            <input id="city" name="city" type="text" value="<%= city %>">
-            <label for="state">UF</label>
-            <input id="state" type="text" value="<%= state %>">
-            <button type="submit">Voltar</button>
-        </form>
+        <div class="container">
+            <form action="/", method="get">
+                <div>
+                    <label for="zipcode"><i class="fa-solid fa-location-dot"></i></label>
+                    <input id="zipcode" name="zipcode" type="text" value="<%= zipcode %>">
+                </div>
+                <div>
+                    <label for="street"><i class="fa-solid fa-road"></i></label>
+                    <input id="street" name="street" type="text" value="<%= street %>">    
+                </div>
+                <div>
+                    <label for="neighborhood"><i class="fa-solid fa-house"></i></label>
+                    <input id="neighborhood"  name="neighborhood" type="text" value="<%= neighborhood %>">    
+                </div>
+                <div>
+                    <label for="city"><i class="fa-solid fa-city"></i></label>
+                    <input id="city" name="city" type="text" value="<%= city %>">    
+                </div>
+                <div>
+                    <label for="state"><i class="fa-solid fa-flag-usa"></i></label>
+                    <input id="state" type="text" value="<%= state %>">    
+                </div>
+                <div>
+                    <button type="submit">Voltar</button>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

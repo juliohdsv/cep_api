@@ -8,6 +8,7 @@ const cepController = {
         
         response.statusCode = 200;
         return response.render('cep', {
+            cssType: '/css/cep.css',
             title: 'Buscar cep - Local',
             zipcode: foundData.cep,
             state: foundData.state,
@@ -18,7 +19,10 @@ const cepController = {
     },
 
     screen: (request, response) => {
-        return response.render('home', {title: "Buscar cep - Home"});
+        return response.render('home', {
+            cssType: '/css/style.css',
+            title: "Buscar cep - Home"
+        });
     },
 
     search: (request, response) => {
@@ -29,7 +33,6 @@ const cepController = {
         }else{
             response.redirect(`/cep/${numCep}`);
         }
-        
     },
 };
 
