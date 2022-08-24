@@ -6,21 +6,22 @@ const cepController = {
         try {
             const {codigo} = request.params;
             const {data: foundData} = await cepApi.get(`/cep/v2/${codigo}`);
+
+            response.statusCode = 200;
+            return response.render('cep', {
+                cssType: '/css/cep.css',
+                title: 'Buscar cep - Local',
+                zipcode: foundData.cep,
+                state: foundData.state,
+                city: foundData.city,
+                neighborhood: foundData.neighborhood,
+                street: foundData.street
+            });
+
         } catch(err){
             console.log(err.data);
             return response.send(`<h1>Cep inválido!</h1>`);
         }
-       
-        response.statusCode = 200;
-        return response.render('cep', {
-            cssType: '/css/cep.css',
-            title: 'Buscar cep - Local',
-            zipcode: foundData.cep,
-            state: foundData.state,
-            city: foundData.city,
-            neighborhood: foundData.neighborhood,
-            street: foundData.street
-        });
     },
 
     screen: (request, response) => {
